@@ -13,19 +13,29 @@
     }
 
 }
+
+
+
+
+.nav.transparent {
+  background-color: transparent;
+}
+
 nav {
-  height: 50px;
+  height: 56px;
   text-align: center;
   width: 100%;
-  background: rgba(255, 215, 0, 1);
-  border-top: 1px solid rgba(255, 215, 0, 1);
-  border-bottom: 1px solid rgba(255, 215, 0, 1);
+  background: rgba(218, 205, 205, 0.6);
+  border-top: 1px solid rgb(92, 92, 92);
+  border-bottom: 1px solid  rgba(218, 205, 205, 0.6);
   display: flex;
   justify-content: space-between; /* Use space-between to push items to the edges */
   align-items: center;
    position: fixed;
    top: 0;
    z-index: 1000;
+   backdrop-filter: blur(8px);
+   box-shadow: 0 20px 30px rgba(0,0,0,0.15);
 }
 
 nav ul {
@@ -55,9 +65,9 @@ nav ul li a:hover{
 }
 
 .logo {
-  height: 14vh;
+  height: 13vh;
 }
-card_section{
+.card_section{
   background-image: url('/pics/Untitled-4.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -219,8 +229,10 @@ background: transparent;
    
 
 
+
 .gallery{
-  width: 350px;
+  width: 80%;
+  max-width: 600px;
   overflow: hidden;
   justify-content: center;
   text-align: center;
@@ -238,6 +250,8 @@ background: transparent;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
+  
+
   
   
 
@@ -279,8 +293,11 @@ background: transparent;
 .carousel-container {
   overflow: hidden;
   padding-top: 16%;
-  height: 400px;
+  height: 530px;
   width: 100%;
+  padding-top:56.25 ;
+  position: relative;
+  
 }
 
 .carousel {
@@ -288,12 +305,16 @@ background: transparent;
   transition: transform 0.5s ease-in-out;
   border: 2px solid #333; /* Change the color as needed */
   border-radius: 8px; /* Optional: Add border-radius for rounded corners */
- 
+ top: 0;
+ left:0;
+ width: 100%;
+ height: 100%;
 }
 
 .carousel img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .controls {
@@ -304,7 +325,14 @@ background: transparent;
   justify-content: space-between;
   transform: translateY(-50%);
 }
-
+@media only screen and (max-width:600px) {
+  .gallery {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
+  .controls{
+    font-size: 14px;
+  }
+  }
 .control-btn {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
@@ -320,6 +348,7 @@ background: transparent;
   margin: 0;
   border-radius: 2px;
 }
+
 
 .container{
   position: absolute;
@@ -474,12 +503,13 @@ background: transparent;
   background: #ffdd00;
   color: #000;
 }
+
 .container1{
   position: absolute;
-  top: 25%;
-  left: 85%;
+  top: 23%;
+  left: 90%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 80%;
   height: 80%;
 }
 
@@ -496,7 +526,7 @@ background: transparent;
   transition: 0.5s;
 }
 
-.slide1 .item1:nth-child(1),.slide .item1:nth-child(2){
+.slide1 .item1:nth-child(1),.slide1 .item1:nth-child(2){
   top: 100px;
   left: 10px;
   transform: translate(0, 0);
@@ -572,7 +602,7 @@ background: transparent;
   margin-top: 10px;
   margin-bottom: 20px;
   opacity:0;
-  animation: animate 1s ease-in-out 0.3s 1 forwards;
+  animation: animate2 1s ease-in-out 0.3s 1 forwards;
   font-family:cursive;
   text-shadow:2px 2px black;
 }
@@ -583,11 +613,11 @@ background: transparent;
   border: none;
   cursor: pointer;
   opacity: 0;
-  animation: animate 1s ease-in-out 0.6s 1 forwards;
+  animation: animate2 1s ease-in-out 0.6s 1 forwards;
 }
 
 
-@keyframes animate {
+@keyframes animate2 {
   from{
       opacity: 0;
       transform: translate(0, 100px);
@@ -609,6 +639,7 @@ background: transparent;
   position: absolute;
   bottom: -57px;
   margin-left: -30%;
+  
 }
 
 .button1 button{
@@ -626,14 +657,12 @@ background: transparent;
   background: #ffdd00;
   color: #000;
 }
-
-
 .container2{
   position: absolute;
-  top: 25%;
-  left: 85%;
+  top: 23%;
+  left: 90%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 80%;
   height: 80%;
 }
 
@@ -650,7 +679,7 @@ background: transparent;
   transition: 0.5s;
 }
 
-.slide2 .item2:nth-child(1),.slide .item2:nth-child(2){
+.slide2 .item2:nth-child(1),.slide2 .item2:nth-child(2){
   top: 100px;
   left: 10px;
   transform: translate(0, 0);
@@ -712,21 +741,21 @@ background: transparent;
 }
 
 
-.content2 .name2{
+.content2 .name1{
   font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
   opacity: 0;
-  animation: animate 1s ease-in-out 1 forwards;
+  animation: animate3 1s ease-in-out 1 forwards;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-shadow:2px 2px yellow;
 }
 
-.content2 .des2{
+.content2 .des1{
   margin-top: 10px;
   margin-bottom: 20px;
   opacity:0;
-  animation: animate 1s ease-in-out 0.3s 1 forwards;
+  animation: animate3 1s ease-in-out 0.3s 1 forwards;
   font-family:cursive;
   text-shadow:2px 2px black;
 }
@@ -737,11 +766,11 @@ background: transparent;
   border: none;
   cursor: pointer;
   opacity: 0;
-  animation: animate 1s ease-in-out 0.6s 1 forwards;
+  animation: animate3 1s ease-in-out 0.6s 1 forwards;
 }
 
 
-@keyframes animate {
+@keyframes animate3 {
   from{
       opacity: 0;
       transform: translate(0, 100px);
@@ -763,6 +792,7 @@ background: transparent;
   position: absolute;
   bottom: -57px;
   margin-left: -30%;
+  
 }
 
 .button2 button{
@@ -780,8 +810,10 @@ background: transparent;
   background: #ffdd00;
   color: #000;
 }
+
+
 /*tech talk*/
-.techtalk1 {
+.techtalk {
   height: 500px;
   display: flex;
   width: 60%;
@@ -789,19 +821,19 @@ background: transparent;
   margin-left: 150px;
   position: relative;
   justify-content: space-between;
-}
+  background: #ffffff;
+} 
+.cultural{
+  height: 500px;
+  display: flex;
+  width: 60%;
+  margin-top: 100px;
+  margin-left: 150px;
+  position: relative;
+  justify-content: space-between;
 
-.techtalk img {
-  height: 400px;
-  width: 400px;
-  color: transparent;
-  border: 2px solid  rgb(255, 255, 0);
-  box-shadow: 10px 10px 5px  rgb(255, 255, 0);
-  -moz-box-shadow: 10px 10px 5px  rgb(255, 255, 0);
-  -webkit-box-shadow: 10px 10px 5px yellow;
-  -khtml-box-shadow: 10px 10px 5px rgb(255, 255, 0);
- 
-}
+} 
+
 .workshop1{
   height: 500px;
   display: flex;
@@ -810,9 +842,26 @@ background: transparent;
   margin-left: 150px;
   position: relative;
   justify-content: space-between;
+  background-color: #ffffff;
 }
 
 .techtalk p{
+  padding-left: px;
+  color: rgb(241, 241, 11);
+  padding-top: 6px;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+.cultural p{
+  padding-left: px;
+  color: rgb(241, 241, 11);
+  padding-top: 6px;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+.workshop1 p{
   padding-left: px;
   color: rgb(241, 241, 11);
   padding-top: 6px;
@@ -871,7 +920,7 @@ text-transform: uppercase;
 
 .about-section{
   background: #000;
-  min-height: 400px;
+  min-height: 40px;
 }
 .logos:hover .logo-slide{
   animation-play-state: paused ;
@@ -882,6 +931,8 @@ text-transform: uppercase;
   background: white;
   white-space: nowrap;
   position: relative;
+  
+
 }
 .logo-slide{
   display: inline-block;
