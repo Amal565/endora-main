@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -7,10 +10,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
     
 </head>
 
@@ -21,14 +22,21 @@
             
         <nav class="navvbar" id="navbar" >
             <img class="logo"src="/vibetest2/end.png" alt="hh"> 
-          <ul>
+          <ul class="sidebar"> 
+              <li class="hideonmobile"><a href="#">ENDORA 2.0</a></li>
+              <li class="hideonmobile"><a href="#">home</a></li>
+              <li class="hideonmobile"><a href="#workshop1">ABOUT</a></li>
+              <li class="menu" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="blue" ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
 
-              <li><a href="#">ENDORA 2.0</a></li>
-              <li><a href="#">home</a></li>
-              <li><a href="#workshop1">ABOUT</a></li>
           </ul>
+          <ul >
+            <li onclick= hidesidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="27" viewBox="0 -960 960 960" width="27"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li ><a href="#">ENDORA 2.0</a></li>
+            <li ><a href="#">home</a></li>
+            <li><a href="#workshop1">ABOUT</a></li>
+        </ul>
         </nav>
-    
+  
         <!--card part-->
     <section class="card_section">
         <div class="cards">
@@ -104,19 +112,20 @@
 <h1 class="w-h">
     WORKSHOP
 </h1>
-<div class="workshop1" id="workshop1">
-    <div class="text">
+<div class="text">
         
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.
-            
-            Lorem ipsum dolor sit amet, consecteturbr   <br> adipiscing elit, sed do eiusmod temporbr    <br> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <br>in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt mollit anim <br>id est laborum.
-        </p>
-    </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit. Sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.
+        
+        Lorem ipsum dolor sit amet, consecteturbr   <br> adipiscing elit, sed do eiusmod temporbr    <br> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <br>in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt mollit anim <br>id est laborum.
+    </p>
+</div>
+<div class="workshop1" id="workshop1">
+
     
     <div class="container">
         <div class="slide"> 
-            <div class="item" style="background-image:url(/vibetest2/3d\ Printing\ NEW.jpg);">
+            <div class="item" style="background-image:url(/vibetest2/16.jpg);">
                 <div class="content">
                     <div class="name">lead</div>
                     <div class="des">ENDORA THE TECHNO FLEA FEST</div>
@@ -183,16 +192,19 @@
 
 <h1 class="w-h1">
     techtalk</h1>
-<div class="techtalk">
-         
-    <div class="text">
+    <div class="text1">
 
        
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        
+
+<div class="techtalk">
+         
+    
             
 
             
@@ -266,6 +278,14 @@
 <h1 class="w-h2">
    culture fest
 </h1>
+<div class="text2">
+        
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
 <div class="cultural">
     <div class="container2">
         <div class="slide2"> 
@@ -329,14 +349,7 @@
     </div>
 
     
-    <div class="text">
-        
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-    </div>
+   
 </div>
 
 
@@ -454,6 +467,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
 
+  function showsidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+    function hidesidebar(){
+        const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+    }
   
    
   
